@@ -1,0 +1,24 @@
+<!-- These variables are passed in from the component -->
+<h1>{{ title }}</h1>
+<div>
+    <p>The value of this variable is passed into the html, from the appComponent: {{ name }}.</p>
+</div>
+<div>
+    <p>{{ text_info }}</p>
+</div>
+
+
+<!-- Property 'myText' does not exist on type 'AppComponent' -->
+<div ng-app="" ng-init="myText='Hello World!'">
+    <h1>{{myText}}</h1>
+</div>
+
+<div ng-controller="MyController">
+  Your name:
+    <input type="text" ng-model="username">
+    <button ng-click='sayHello()'>greet</button>
+  <hr>
+  {{greeting}}
+</div>
+
+<router-outlet></router-outlet>
